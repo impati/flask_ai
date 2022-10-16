@@ -1,0 +1,5 @@
+names:
+- '--- --'
+nc: 1
+train: cp401-1/train/images
+val: cp401-1/valid/images
