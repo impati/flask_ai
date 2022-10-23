@@ -20,7 +20,7 @@ def main():
     print(data["image_path"])
     (result,filename) = md.main(data["image_path"])
     namelist = filename.split('/')
-    image_url = host_name + "image/" + namelist[4]+'_'+namelist[5]
+    image_url = host_name + "image/" + namelist[-2]+'_'+namelist[-1]
     print(image_url)
     return { "class_id" :result , "image_url" :image_url}
     
