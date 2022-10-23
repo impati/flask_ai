@@ -1,4 +1,3 @@
-from turtle import up
 from flask import Flask ,jsonify,request,send_from_directory,current_app
 from flask_cors import CORS
 import mydetect as md
