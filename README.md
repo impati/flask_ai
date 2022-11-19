@@ -9,7 +9,7 @@
 
 ## 기능 목록
 
-- [불량 판정]()
-- [이미지 경로]()
+- [불량 판정](https://github.com/impati/flask_ai/blob/main/docs/decision.md)
+- [이미지 경로](https://github.com/impati/flask_ai/blob/main/docs/imagePath.md)
 
 
