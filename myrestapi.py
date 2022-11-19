@@ -31,7 +31,13 @@ def image_location(path):
     path_list = path.split('_')
     uploads += path_list[0] 
     print(uploads)
-    print(path_list[1])
-    return send_from_directory(directory=uploads,filename=path_list[1])
+    image_path =""
+    path_len = len(path_list[1:]) 
+    for i in range(path_len):
+        image_path += path_list[1:][i]
+        if i + 1 != path_len:
+            image_path += '_'
+    print(image_path)
+    return send_from_directory(directory=uploads,filename=image_path)
 
 

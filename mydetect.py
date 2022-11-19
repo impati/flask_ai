@@ -227,7 +227,7 @@ def run(
 def parse_opt(custom_image_path):
     print(custom_image_path)
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'best2.pt', help='model path or triton URL')
+    parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'best3.pt', help='model path or triton URL')
     parser.add_argument('--source',type=str, default=custom_image_path, help='file/dir/URL/glob/screen/0(webcam)')
     parser.add_argument('--data', type=str, default=ROOT / 'data/coco128.yaml', help='(optional) dataset.yaml path')
     parser.add_argument('--imgsz', '--img', '--img-size', nargs='+', type=int, default=[640], help='inference size h,w')
@@ -254,7 +254,8 @@ def parse_opt(custom_image_path):
     parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--dnn', action='store_true', help='use OpenCV DNN for ONNX inference')
     parser.add_argument('--vid-stride', type=int, default=1, help='video frame-rate stride')
-    opt = parser.parse_args()
+    
+    opt, unknown = parser.parse_known_args()
     opt.imgsz *= 2 if len(opt.imgsz) == 1 else 1  # expand
     print('opt = [',opt,']')
     print_args(vars(opt))
